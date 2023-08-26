@@ -1,0 +1,24 @@
+package com.example.notes_app.domain.notes
+
+import com.example.notes_app.presentation.*
+import kotlinx.datetime.LocalDateTime
+
+data class Notes (
+    val id: Long?,
+    val title: String,
+    val content: String,
+    val colorHex: Long,
+    val created: LocalDateTime
+) {
+    companion object {
+        private val colors = listOf(
+            RedOrangeHex,
+            RedPinkHex,
+            BabyBlueHex,
+            VioletHex,
+            LightGreenHex
+        )
+
+        fun generateRandomColor() = colors.random()
+    }
+}
