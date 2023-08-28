@@ -38,7 +38,6 @@ class MainActivity : ComponentActivity() {
                         NoteDetailScreen(noteId = noteId, navController = navController)
                     }
                 }
-//                NoteListScreen()
             }
         }
     }
